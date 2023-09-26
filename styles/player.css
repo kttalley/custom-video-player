@@ -1,0 +1,77 @@
+  body {
+      background-color: #FF6E6E;
+      display: flex;
+      padding-top:24px;
+      justify-content: center;
+    }
+
+.videoContainer {
+      display: inline-block;
+      position: relative;
+      /* max-width: 832px; */
+    }
+
+
+    #video-player {
+      object-fit: contain;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+      width: 92vw;
+      border-radius: 32px;
+      outline: solid rgba(255,255,255,0.6) 1px;
+      stroke-width: 32px;
+      box-shadow: 0px 10px 30px 20px rgba(0,0,0,0.33);
+      background-image: url(../assets/testMovie2.mp4);
+      /* background-image: url('https://design.kristiantalley.com/ktt-cloud/art/testMovie2.mp4'); */
+      
+
+    }
+
+    /* pause button */
+    .videoContainer .videoControls.pauseVideoBtn {
+      background-image: url(../assets/pause.svg);
+    }
+
+    /* play button */
+    .videoContainer .videoControls.playVideoBtn {
+      background-image: url(../assets/play.svg);
+    }
+
+    .videoContainer .videoControls {
+      position: absolute;
+      left: 0;
+      display: block;
+      -webkit-transform: translateY(-100%) scale(1);
+      transform: translateY(-100%) scale(1);
+      background-repeat: no-repeat;
+      width: 80px;
+      height: 80px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      background-size: cover;
+    }
+
+  
+    /* mobile */
+    @media (max-width: 767px) {
+      .videoContainer .videoControls {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%) scale(1.4);
+        transform: translate(-50%, -50%) scale(1.4);
+      }
+
+      .--overlay {
+        -webkit-filter: brightness(40%);
+        -moz-filter: brightness(40%);
+        -o-filter: brightness(40%);
+        -ms-filter: brightness(40%);
+        filter: brightness(40%);
+      }
+
+      .videoContainer .videoControls.--hide {
+        display: none;
+      }
+    }

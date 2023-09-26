@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./styles/player.css" rel="stylesheet" />
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="./scripts/videocontrol.js"></script>
+</head>
+
+<body>
+  <!-- my attempt -->
+
+  <div class="video-wrapper videoContainer">
+    <video id="video-player" width="100%"
+      poster="https://design.kristiantalley.com/ktt-cloud/art/tumblr_ldp9x5coIx1qfchfvo1_1280.jpg"
+      src="https://design.kristiantalley.com/ktt-cloud/art/testMovie2.mp4"
+      muted="muted" loop="loop" autoplay="autoplay" playsinline="playsinline"></video>
+    <button onclick="PausePlay()" id="video-control" tabindex="0"
+      class="videoControls pauseVideoBtn --hide"></button>
+  </div>
+
+  <script src="./scripts/playback.js"></script>
+ 
+
+</body>
+</html>
